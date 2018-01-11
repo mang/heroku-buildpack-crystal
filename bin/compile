@@ -63,12 +63,9 @@ PATH="${PATH}:${CRYSTAL_DIR}/bin"
 # Build the project
 cd $BUILD_DIR
 
-start "Removing old dependencies"
+start "Updating Dependencies"
   ls -lahR .
   rm -rvf .shards/ lib/
-finished
-
-start "Updating Dependencies"
   shards install
   shards update
 finished
