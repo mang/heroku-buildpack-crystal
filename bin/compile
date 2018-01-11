@@ -65,9 +65,11 @@ cd $BUILD_DIR
 
 start "Updating Dependencies"
   ls -lahR .
+  cat shards.yml
   rm -rvf .shards/ lib/
   shards install
   shards update
+  ls -lahR .
 finished
 
 NO_DEBUG_IF_AVAILABLE=`crystal build --help | grep -q -- --no-debug && echo -n --no-debug`
