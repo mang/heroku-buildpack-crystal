@@ -64,6 +64,7 @@ PATH="${PATH}:${CRYSTAL_DIR}/bin"
 cd $BUILD_DIR
 
 start "Removing old dependencies"
+  ls -lahR .
   rm -rvf .shards/ lib/
 finished
 
