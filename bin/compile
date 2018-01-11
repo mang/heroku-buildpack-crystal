@@ -64,7 +64,7 @@ PATH="${PATH}:${CRYSTAL_DIR}/bin"
 cd $BUILD_DIR
 
 start "Installing Dependencies"
-  crystal deps --production
+  crystal deps update --production
 finished
 
 NO_DEBUG_IF_AVAILABLE=`crystal build --help | grep -q -- --no-debug && echo -n --no-debug`
