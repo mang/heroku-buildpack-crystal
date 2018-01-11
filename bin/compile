@@ -65,8 +65,9 @@ cd $BUILD_DIR
 
 start "Updating Dependencies"
   ls -lahR .
-  cat shards.yml
+  cat shard.yml
   rm -rvf .shards/ lib/
+  mkdir .shards lib
   shards install
   shards update
   ls -lahR .
