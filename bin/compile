@@ -63,6 +63,10 @@ PATH="${PATH}:${CRYSTAL_DIR}/bin"
 # Build the project
 cd $BUILD_DIR
 
+start "Listing dependencies"
+  shards list
+finished
+
 start "Removing old dependencies"
   rm -rvf .shards/ lib/
 finished
